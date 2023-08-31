@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Button } from '@components/Button';
+import { ContentLink } from '@components/ContentLink';
 import { Project } from '@components/Project';
 import { Section } from '@components/Section';
 import { Skill } from '@components/Skill';
@@ -19,7 +19,7 @@ export default function Home() {
             download="matheus-cv.pdf"
             className="group"
           >
-            <Button>
+            <ContentLink>
               Baixar CV
               <Image
                 src="/icons/icon-cv.svg"
@@ -28,7 +28,7 @@ export default function Home() {
                 height={18}
                 className="group-hover:animate-bounce"
               />
-            </Button>
+            </ContentLink>
           </Link>
         </div>
       </Section>

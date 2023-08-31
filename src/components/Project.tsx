@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Button } from './Button';
+import { ContentLink } from './ContentLink';
 
 type ProjectProps = {
   img: string;
@@ -34,14 +34,14 @@ export const Project = ({
         />
         <div
           className="group content-[''] absolute top-0 w-full
-        max-w-[500px] h-full rounded-md flex flex-col justify-center items-center gap-2 duration-300 ease-in-out hover:bg-black/30 hover:backdrop-blur-sm"
+        max-w-[500px] h-full rounded-md flex flex-col justify-center items-center gap-2 duration-300 ease-in-out hover:bg-black/30 hover:backdrop-blur-sm focus-within:bg-black/30 focus-within:backdrop-blur-sm"
         >
           <Link
             href={url}
             target="_blank"
-            className="delay-150 ease-in-out opacity-0 group-hover:opacity-100"
+            className="delay-150 ease-in-out opacity-0 group-hover:opacity-100 group-focus-within:opacity-100"
           >
-            <Button>
+            <ContentLink>
               Site{' '}
               <Image
                 src="icons/icon-link.svg"
@@ -49,16 +49,16 @@ export const Project = ({
                 width={16}
                 height={16}
               />
-            </Button>
+            </ContentLink>
           </Link>
           <Link
             href={reposioty}
             target="_blank"
-            className="delay-150 ease-in-out opacity-0 group-hover:opacity-100"
+            className="delay-150 ease-in-out opacity-0 group-hover:opacity-100 group-focus-within:opacity-100"
           >
-            <Button>
+            <ContentLink>
               Repositório <span className="text-sm">{'</>'}</span>
-            </Button>
+            </ContentLink>
           </Link>
         </div>
       </div>
