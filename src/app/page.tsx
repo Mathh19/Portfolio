@@ -5,8 +5,8 @@ import { Button } from '@components/Button';
 import { Project } from '@components/Project';
 import { Section } from '@components/Section';
 import { Skill } from '@components/Skill';
-import { projects } from '@content/projects.json';
-import { skills } from '@content/skills.json';
+import projects from '@content/projects.json';
+import skills from '@content/skills.json';
 
 export default function Home() {
   return (
@@ -43,14 +43,14 @@ export default function Home() {
       </Section>
       <Section title="Habilidades">
         <Skill.Container>
-          {skills.map((skill) => (
+          {skills.data.map((skill) => (
             <Skill.Item key={skill.name} text={skill.name} img={skill.icon} />
           ))}
         </Skill.Container>
       </Section>
       <Section title="Projetos">
         <div className="grid grid-cols-2 gap-6">
-          {projects.map((project) => (
+          {projects.data.map((project) => (
             <Project
               key={project.title}
               title={project.title}
