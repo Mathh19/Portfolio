@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { Footer } from '@components/Footer';
 import { Header } from '@components/Header';
+import { ScrollToTop } from '@components/ScrollToTop';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
         <div className="min-h-screen flex justify-center">
           <main className="w-full max-w-[1440px]">{children}</main>
         </div>
+        <ScrollToTop />
         <Footer />
       </body>
     </html>

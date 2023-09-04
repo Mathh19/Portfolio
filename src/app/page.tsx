@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { ContentLink } from '@components/ContentLink';
+import { Form } from '@components/Form';
 import { Project } from '@components/Project';
 import { Section } from '@components/Section';
 import { Skill } from '@components/Skill';
@@ -11,7 +12,7 @@ import skills from '@content/skills.json';
 export default function Home() {
   return (
     <div>
-      <Section title="Matheus Freitas">
+      <Section id="initial" title="Matheus Freitas">
         <div className="flex flex-col gap-6 justify-center items-center">
           <h2 className="text-2xl text-center">Desenvolvedor Front-end</h2>
           <Link
@@ -32,8 +33,8 @@ export default function Home() {
           </Link>
         </div>
       </Section>
-      <Section title="Sobre mim">
-        <p className="text-xl font-light text-center max-w-3xl">
+      <Section id="about" title="Sobre mim">
+        <p id="About" className="text-xl font-light text-center max-w-3xl">
           Sou um desenvolvedor front-end dedicado a aprimorar constantemente
           meus conhecimentos. Minha paixão está em contribuir de forma
           significativa para o desenvolvimento de aplicações que possam impactar
@@ -41,15 +42,15 @@ export default function Home() {
           tecnologias para criar experiências excepcionais.
         </p>
       </Section>
-      <Section title="Habilidades">
+      <Section id="skills" title="Habilidades">
         <Skill.Container>
           {skills.data.map((skill) => (
             <Skill.Item key={skill.name} text={skill.name} img={skill.icon} />
           ))}
         </Skill.Container>
       </Section>
-      <Section title="Projetos">
-        <div className="grid grid-cols-2 gap-6">
+      <Section id="projects" title="Projetos">
+        <div className="grid grid-cols-2 gap-6 max-md:grid-cols-1">
           {projects.data.map((project) => (
             <Project
               key={project.title}
@@ -62,6 +63,9 @@ export default function Home() {
             />
           ))}
         </div>
+      </Section>
+      <Section id="contact" title="Contato">
+        <Form />
       </Section>
     </div>
   );
