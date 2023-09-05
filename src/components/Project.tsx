@@ -24,7 +24,7 @@ export const Project = ({
 }: ProjectProps) => {
   return (
     <div className="max-w-[500px]">
-      <div className="relative">
+      <div className="relative cursor-pointer">
         <Image
           src={img}
           alt={`Imagem do projeto ${title}`}
