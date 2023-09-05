@@ -14,7 +14,9 @@ export default function Home() {
     <div>
       <Section id="initial" title="Matheus Freitas">
         <div className="flex flex-col gap-6 justify-center items-center">
-          <h2 className="text-2xl text-center">Desenvolvedor Front-end</h2>
+          <h2 className="animate-typewriter animate-line text-2xl text-center max-[336px]:text-xl">
+            Desenvolvedor Front-end.
+          </h2>
           <Link
             href="/cv/atual-cv.pdf"
             download="matheus-cv.pdf"

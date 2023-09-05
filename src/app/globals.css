@@ -12,11 +12,24 @@
     @apply bg-background-color text-white-color
   }
 
-  .bg-animation:after {
+  .border-animation:after {
     content: "";
     --angle: 0deg;
     border-radius: 0.6rem;
     @apply absolute inset-0 z-0
+  }
+
+  .animate-line{
+    position: relative;
+    width: 13em;
+    border-right: 2px solid rgba(255,255,255,.75);
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .animate-typewriter{
+    animation: typewriter 4s steps(24) 1s,
+             blinkCursor .9s steps(24) 1s infinite;
   }
 
   @property --angle {
@@ -31,8 +44,17 @@
     }
   }
 
+  @keyframes typewriter{
+    from{width: 0;}
+    to{width: 13em;}
+  }
+  @keyframes blinkCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+  }
+
   @supports (background: paint(houdini)) {
-    .bg-animation:hover:after, .bg-animation:focus-within:after {
+    .border-animation:hover:after, .border-animation:focus-within:after {
       animation: rotate-animation 1s linear infinite;
       background: linear-gradient(var(--angle), #0D0D0D, #0D0D0D, #FFFFFF);
     }
