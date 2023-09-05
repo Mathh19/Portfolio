@@ -27,7 +27,7 @@ export const ScrollToTop = () => {
       href="#"
       className={`${
         visible ? 'block' : 'hidden'
-      } fixed right-4 bottom-4 p-2 border bg-background-color rounded-full text-2xl duration-200 ease-in-out hover:bg-white hover:text-background-color hover:border-background-color`}
+      } fixed right-4 bottom-4 p-2 border bg-background-color rounded-full text-2xl animate-fadeIn duration-200 ease-in-out hover:bg-white hover:text-background-color hover:border-background-color`}
     >
       <BsArrowUp />
     </a>

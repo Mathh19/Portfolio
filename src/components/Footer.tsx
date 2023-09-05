@@ -9,6 +9,7 @@ export const Footer = () => {
         aria-label="link para o perfil do github"
         href="https://github.com/Mathh19"
         target="_blank"
+        className="duration-300 ease-in-out hover:-translate-y-2"
       >
         <BsGithub />
       </Link>
@@ -16,6 +17,7 @@ export const Footer = () => {
         aria-label="link para enviar um email"
         href="mailto:eumathfreitas@gmail.com"
         target="_blank"
+        className="duration-300 ease-in-out hover:-translate-y-2"
       >
         <MdOutlineEmail />
       </Link>
@@ -23,6 +25,7 @@ export const Footer = () => {
         aria-label="link para o linkedin"
         href="https://www.linkedin.com/in/matheus-freitas-629557232/"
         target="_blank"
+        className="duration-300 ease-in-out hover:-translate-y-2"
       >
         <BsLinkedin />
       </Link>
