@@ -34,7 +34,7 @@ export const MenuLinks = () => {
         {!open ? <FiMenu /> : <IoCloseOutline />}
       </button>
       <div
-        className={`hidden bg-background-color fixed max-md:flex justify-center z-40 inset-0 duration-500 ease-in-out ${
+        className={`hidden min-h-screen bg-background-color fixed max-md:flex justify-center z-40 inset-0 duration-500 ease-in-out ${
           !open ? 'translate-x-[768px]' : 'translate-x-0'
         }`}
       >
