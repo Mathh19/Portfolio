@@ -4,7 +4,37 @@
 
 
 @layer components {
+  * {
+    @apply scroll-smooth
+  }
+
   body {
     @apply bg-background-color text-white-color
+  }
+
+  .bg-animation:after {
+    content: "";
+    --angle: 0deg;
+    border-radius: 0.6rem;
+    @apply absolute inset-0 z-0
+  }
+
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false
+  }
+
+  @keyframes rotate-animation {
+    to {
+      --angle: 360deg
+    }
+  }
+
+  @supports (background: paint(houdini)) {
+    .bg-animation:hover:after, .bg-animation:focus-within:after {
+      animation: rotate-animation 1s linear infinite;
+      background: linear-gradient(var(--angle), #0D0D0D, #0D0D0D, #FFFFFF);
+    }
   }
 }

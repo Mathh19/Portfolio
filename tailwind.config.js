@@ -11,6 +11,12 @@ module.exports = {
         'background-color': '#0D0D0D',
         'white-color': '#FFFFFF',
         'gray-color': '#D9D9D9'
+      },
+      keyframes: {
+        fadeIn: { '0%': { opacity: 0 }, '100%': { opacity: 1 } }
+      },
+      animation: {
+        fadeIn: 'fadeIn 1s ease-in-out'
       }
     }
   },
