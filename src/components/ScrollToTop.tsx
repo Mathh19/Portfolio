@@ -23,6 +23,7 @@ export const ScrollToTop = () => {
 
   return (
     <a
+      aria-label="Navega para o topo da página"
       href="#"
       className={`${
         visible ? 'visible' : 'invisible'
