@@ -28,7 +28,7 @@
   }
 
   .animate-typewriter{
-    animation: typewriter 4s steps(24) 1s,
+    animation: typewriter 4s steps(24) 1s 1 normal both,
              blinkCursor .9s steps(24) 1s infinite;
   }
 
