@@ -4,7 +4,7 @@
       "title": "Focus Mate",
       "description": "Focus Mate é um projeto focado em produtividade, ele ajuda pessoas a manter o foco em suas tarefas utilizando a técnica de pomodoro, sendo possível customizar de acordo com a preferência do usuário, também contém um gerenciador de tarefas.",
       "img": "/imgs/focus-mate.png",
-      "link": "https://focusmate.vercel.app",
+      "link": "https://pomodoromate.vercel.app",
       "repository": "https://github.com/Mathh19/focus-mate",
       "techs": [
         {
