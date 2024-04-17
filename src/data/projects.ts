@@ -18,6 +18,15 @@ export const projects = [
     techs: ['React', 'TypeScript', 'TailwindCSS']
   },
   {
+    title: 'Trend Styles',
+    description:
+      'Um site para uma variedade única de roupas e calçados alternativos, desenvolvido com Next.js e Tailwind para uma experiência de compra moderna e dinâmica.',
+    img: '/imgs/trend-styles.png',
+    url: 'https://trend-styles.vercel.app',
+    repository: 'https://github.com/Mathh19/trend-style',
+    techs: ['Next.js', 'TypeScript', 'TailwindCSS']
+  },
+  {
     title: 'InfoFilms',
     description:
       'InfoFilms é um site com foco em fornecer informações sobre filmes, séries e até os atores, fornecendo busca específica e por categorias.',
