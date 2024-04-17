@@ -3,11 +3,11 @@ import Link from 'next/link';
 
 import { ContentLink } from '@components/ContentLink';
 import { Form } from '@components/Form';
-import { Project } from '@components/Project';
+import { ProjectCard } from '@components/ProjectCard';
 import { Section } from '@components/Section';
 import { Skill } from '@components/Skill';
-import projects from '@content/projects.json';
-import skills from '@content/skills.json';
+import { projects } from '@data/projects';
+import { skills } from '@data/skills';
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
             Desenvolvedor Front-end.
           </h2>
           <Link
-            href="/cv/atual-cv.pdf"
+            href="/cv/matheus-freitas-cv.pdf"
             download="matheus-cv.pdf"
             className="group"
           >
@@ -46,20 +46,20 @@ export default function Home() {
       </Section>
       <Section id="skills" title="Habilidades">
         <Skill.Container>
-          {skills.data.map((skill) => (
+          {skills.map((skill) => (
             <Skill.Item key={skill.name} text={skill.name} img={skill.icon} />
           ))}
         </Skill.Container>
       </Section>
       <Section id="projects" title="Projetos">
         <div className="grid grid-cols-2 gap-6 max-md:grid-cols-1">
-          {projects.data.map((project) => (
-            <Project
+          {projects.map((project) => (
+            <ProjectCard
               key={project.title}
               title={project.title}
               description={project.description}
-              url={project.link}
-              reposioty={project.repository}
+              url={project.url}
+              repository={project.repository}
               img={project.img}
               techs={project.techs}
             />
