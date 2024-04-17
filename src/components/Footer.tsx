@@ -9,25 +9,25 @@ export const Footer = () => {
         aria-label="link para o perfil do github"
         href="https://github.com/Mathh19"
         target="_blank"
-        className="duration-300 ease-in-out hover:-translate-y-2"
+        className="group"
       >
-        <BsGithub />
+        <BsGithub className="transition-all duration-200 group-hover:-translate-y-2" />
       </Link>
       <Link
         aria-label="link para enviar um email"
         href="mailto:eumathfreitas@gmail.com"
         target="_blank"
-        className="duration-300 ease-in-out hover:-translate-y-2"
+        className="group"
       >
-        <MdOutlineEmail />
+        <MdOutlineEmail className="transition-all duration-200 group-hover:-translate-y-2" />
       </Link>
       <Link
         aria-label="link para o linkedin"
         href="https://www.linkedin.com/in/matheus-freitas-629557232/"
         target="_blank"
-        className="duration-300 ease-in-out hover:-translate-y-2"
+        className="group"
       >
-        <BsLinkedin />
+        <BsLinkedin className="transition-all duration-200 group-hover:-translate-y-2" />
       </Link>
     </footer>
   );
