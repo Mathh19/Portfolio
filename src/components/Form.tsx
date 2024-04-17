@@ -11,16 +11,22 @@ const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID;
 const publicKey = process.env.NEXT_PUBLIC_PLUBIC_KEY;
 
 export const Form = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [formFields, setFormFields] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
   const [loading, setLoading] = useState(false);
   const [sended, setSended] = useState(false);
 
   const handleSendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (name === '' || email === '' || message === '') {
+    if (
+      formFields.name === '' ||
+      formFields.email === '' ||
+      formFields.message === ''
+    ) {
       alert(
         'Ops! Parece que um dos campos estão vazios :( por favor verifique e preencha o campo vazio.'
       );
@@ -28,9 +34,9 @@ export const Form = () => {
     }
 
     const template = {
-      from_name: name,
-      email: email,
-      message: message
+      from_name: formFields.name,
+      email: formFields.email,
+      message: formFields.message
     };
 
     setLoading(true);
@@ -39,9 +45,11 @@ export const Form = () => {
       .then(
         function (response) {
           console.log('SUCCESS!', response.status, response.text);
-          setName('');
-          setEmail('');
-          setMessage('');
+          setFormFields({
+            name: '',
+            email: '',
+            message: ''
+          });
           setLoading(false);
           setSended(true);
           setTimeout(() => {
@@ -65,16 +73,20 @@ export const Form = () => {
         <div className="w-full flex flex-col gap-4">
           <Input
             type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={formFields.name}
+            onChange={(e) =>
+              setFormFields({ ...formFields, name: e.target.value })
+            }
             name="name"
             label="Nome"
             placeholder="Seu nome"
           />
           <Input
             type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={formFields.email}
+            onChange={(e) =>
+              setFormFields({ ...formFields, email: e.target.value })
+            }
             name="email"
             label="Email"
             placeholder="example@example.com"
@@ -85,8 +97,10 @@ export const Form = () => {
           <textarea
             id="message"
             name="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            value={formFields.message}
+            onChange={(e) =>
+              setFormFields({ ...formFields, message: e.target.value })
+            }
             cols={30}
             rows={5}
             placeholder="Digite sua messagem"
