@@ -1,7 +1,6 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import { LiaFileDownloadSolid } from 'react-icons/lia';
 
-import { ContentLink } from '@components/ContentLink';
+import { CustomLink } from '@components/CustomLink';
 import { Form } from '@components/Form';
 import { ProjectCard } from '@components/ProjectCard';
 import { Section } from '@components/Section';
@@ -17,22 +16,10 @@ export default function Home() {
           <h2 className="animate-typewriter animate-line text-2xl text-center max-[336px]:text-xl">
             Desenvolvedor Front-end.
           </h2>
-          <Link
-            href="/cv/matheus-freitas-cv.pdf"
-            download="matheus-cv.pdf"
-            className="group"
-          >
-            <ContentLink>
-              Baixar CV
-              <Image
-                src="/icons/icon-cv.svg"
-                alt="svg icon"
-                width={18}
-                height={18}
-                className="group-hover:animate-bounce"
-              />
-            </ContentLink>
-          </Link>
+
+          <CustomLink href="/cv/matheus-freitas-cv.pdf" target="_blank">
+            CV <LiaFileDownloadSolid size={20} />
+          </CustomLink>
         </div>
       </Section>
       <Section id="about" title="Sobre mim">
