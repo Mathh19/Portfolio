@@ -32,11 +32,11 @@ export default function Home() {
         </p>
       </Section>
       <Section id="skills" title="Habilidades">
-        <Skill.Container>
+        <div className="flex flex-wrap justify-center gap-8">
           {skills.map((skill) => (
-            <Skill.Item key={skill.name} text={skill.name} img={skill.icon} />
+            <Skill key={skill.name} img={skill.icon} text={skill.name} />
           ))}
-        </Skill.Container>
+        </div>
       </Section>
       <Section id="projects" title="Projetos">
         <div className="grid grid-cols-2 gap-6 max-md:grid-cols-1">
