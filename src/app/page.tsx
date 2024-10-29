@@ -1,10 +1,10 @@
 import { LiaFileDownloadSolid } from 'react-icons/lia';
 
+import { ContainerProjects } from '@components/ContainerProjects';
+import { ContainerSkills } from '@components/ContainerSkills';
 import { CustomLink } from '@components/CustomLink';
 import { Form } from '@components/Form';
-import { ProjectCard } from '@components/ProjectCard';
 import { Section } from '@components/Section';
-import { Skill } from '@components/Skill';
 import { projects } from '@data/projects';
 import { skills } from '@data/skills';
 
@@ -32,26 +32,10 @@ export default function Home() {
         </p>
       </Section>
       <Section id="skills" title="Habilidades">
-        <div className="flex flex-wrap justify-center gap-8">
-          {skills.map((skill) => (
-            <Skill key={skill.name} img={skill.icon} text={skill.name} />
-          ))}
-        </div>
+        <ContainerSkills skills={skills} />
       </Section>
       <Section id="projects" title="Projetos">
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
-          {projects.map((project) => (
-            <ProjectCard
-              key={project.title}
-              title={project.title}
-              description={project.description}
-              url={project.url}
-              repository={project.repository}
-              img={project.img}
-              techs={project.techs}
-            />
-          ))}
-        </div>
+        <ContainerProjects projects={projects} />
       </Section>
       <Section id="contact" title="Contato">
         <Form />

@@ -1,7 +1,10 @@
+'use client';
+
 import Image from 'next/image';
 import { IoIosLink, IoLogoGithub } from 'react-icons/io';
 
 import { Project } from '@data/projects';
+import { motion } from 'framer-motion';
 
 import { CustomLink } from './CustomLink';
 
@@ -14,7 +17,13 @@ export const ProjectCard = ({
   techs
 }: Project) => {
   return (
-    <div className="w-full max-w-[700px] space-y-2.5">
+    <motion.div
+      className="w-full max-w-[700px] space-y-2.5"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="group relative bg-gradient-to-b rounded-md from-zinc-400 to-zinc-600 p-[1px]">
         <Image
           src={img}
@@ -49,6 +58,6 @@ export const ProjectCard = ({
           GitHub <IoLogoGithub size={20} />
         </CustomLink>
       </div>
-    </div>
+    </motion.div>
   );
 };

@@ -1,4 +1,4 @@
-export type Skill = {
+export type TSkill = {
   name: string;
   icon: string;
 };
@@ -36,4 +36,4 @@ export const skills = [
     name: 'GIT',
     icon: 'icons/icon-git.svg'
   }
-] as Skill[];
+] as TSkill[];
