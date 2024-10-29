@@ -14,13 +14,14 @@ export const ProjectCard = ({
   techs
 }: Project) => {
   return (
-    <div className="max-w-[500px] space-y-2.5">
+    <div className="w-full max-w-[700px] space-y-2.5">
       <div className="group relative bg-gradient-to-b rounded-md from-zinc-400 to-zinc-600 p-[1px]">
         <Image
           src={img}
           alt={`Imagem do projeto ${title}`}
           width={800}
           height={500}
+          priority
           className="rounded-md"
         />
       </div>

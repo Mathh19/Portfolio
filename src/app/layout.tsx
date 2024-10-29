@@ -20,11 +20,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body className={inter.className}>
         <Header />
         <div className="min-h-screen flex justify-center">
-          <main className="w-full max-w-[1440px]">{children}</main>
+          <main className="w-full">{children}</main>
         </div>
         <ScrollToTop />
         <Footer />

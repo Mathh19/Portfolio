@@ -39,7 +39,7 @@ export default function Home() {
         </div>
       </Section>
       <Section id="projects" title="Projetos">
-        <div className="grid grid-cols-2 gap-6 max-md:grid-cols-1">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
           {projects.map((project) => (
             <ProjectCard
               key={project.title}
