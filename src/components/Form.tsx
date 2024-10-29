@@ -67,7 +67,7 @@ export const Form = () => {
   return (
     <form
       onSubmit={handleSendEmail}
-      className="w-full max-w-[1024px] space-y-4"
+      className="w-full max-w-[1670px] space-y-4"
     >
       <div className="w-full flex gap-8 max-md:flex-col max-md:gap-4">
         <div className="w-full flex flex-col gap-4">
