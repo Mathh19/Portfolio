@@ -10,7 +10,7 @@ export const Section = ({ id, title, children }: SectionProps) => {
   return (
     <section
       id={id}
-      className="w-full flex flex-col justify-center items-center gap-6 py-8 px-14"
+      className="w-full flex flex-col justify-center items-center gap-6 py-8 px-6 md:px-14"
     >
       <h2 className="text-[42px] text-center">{title}</h2>
       <Divisor />
