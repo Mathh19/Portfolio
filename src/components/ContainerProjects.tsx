@@ -8,7 +8,7 @@ type ContainerProjectsProps = {
 
 export const ContainerProjects = ({ projects }: ContainerProjectsProps) => {
   return (
-    <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
+    <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 justify-items-center">
       {projects.map((project) => (
         <ProjectCard
           key={project.title}

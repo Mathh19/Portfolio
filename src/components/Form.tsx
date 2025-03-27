@@ -65,12 +65,9 @@ export const Form = () => {
   };
 
   return (
-    <form
-      onSubmit={handleSendEmail}
-      className="w-full max-w-[1670px] space-y-4"
-    >
+    <form onSubmit={handleSendEmail} className="w-full space-y-4">
       <div className="w-full flex gap-8 max-md:flex-col max-md:gap-4">
-        <div className="w-full flex flex-col gap-4">
+        <div className="w-full flex flex-col gap-6">
           <Input
             type="text"
             value={formFields.name}
@@ -89,7 +86,7 @@ export const Form = () => {
             }
             name="email"
             label="Email"
-            placeholder="example@example.com"
+            placeholder="email@email.com"
           />
         </div>
         <div className="w-full flex flex-col text-3xl gap-2.5">

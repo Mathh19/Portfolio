@@ -18,7 +18,7 @@ export const ProjectCard = ({
 }: Project) => {
   return (
     <motion.div
-      className="w-full max-w-[700px] space-y-2.5"
+      className="w-full space-y-2.5"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -31,7 +31,7 @@ export const ProjectCard = ({
           width={800}
           height={500}
           priority
-          className="rounded-md"
+          className="rounded-md w-full object-contain"
         />
       </div>
 
