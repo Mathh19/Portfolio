@@ -24,14 +24,14 @@ export const ProjectCard = ({
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
     >
-      <div className="group relative bg-gradient-to-b rounded-md from-zinc-400 to-zinc-600 p-[1px]">
+      <div className="relative bg-gradient-to-b rounded-md from-zinc-400 to-zinc-600 p-[1px]">
         <Image
           src={img}
           alt={`Imagem do projeto ${title}`}
           width={800}
           height={500}
           priority
-          className="rounded-md w-full object-contain"
+          className="rounded-md aspect-[16/10] w-full object-cover"
         />
       </div>
 
@@ -54,9 +54,11 @@ export const ProjectCard = ({
           Site <IoIosLink />
         </CustomLink>
 
-        <CustomLink href={repository} target="_blank">
-          GitHub <IoLogoGithub size={20} />
-        </CustomLink>
+        {repository && (
+          <CustomLink href={repository} target="_blank">
+            GitHub <IoLogoGithub size={20} />
+          </CustomLink>
+        )}
       </div>
     </motion.div>
   );

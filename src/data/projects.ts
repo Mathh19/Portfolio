@@ -3,11 +3,19 @@ export type Project = {
   description: string;
   img: string;
   url: string;
-  repository: string;
+  repository?: string;
   techs: string[];
 };
 
 export const projects = [
+  {
+    title: 'Findship',
+    description:
+      'Desenvolvi a interface do usuário com base nos designs fornecidos no Figma, garantindo fidelidade visual e responsividade. Fui responsável por integrar o frontend à API, implementando funcionalidades de autenticação, busca e filtragem de bolsas de estudo, programas de intercâmbio e oportunidades globais.',
+    img: 'https://findship.ai/og-image.jpg',
+    url: 'https://findship.ai',
+    techs: ['Nextjs', 'TypeScript', 'TailwindCSS']
+  },
   {
     title: 'Pomodoro',
     description:

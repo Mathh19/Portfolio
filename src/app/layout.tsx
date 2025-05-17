@@ -24,7 +24,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         <div className="min-h-screen flex justify-center">
-          <main className="w-full">{children}</main>
+          <main className="w-full px-6 md:px-14 max-w-[1440px]">
+            {children}
+          </main>
         </div>
         <ScrollToTop />
         <Footer />
