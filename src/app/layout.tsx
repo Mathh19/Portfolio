@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Matheus Freitas | Desenvolvedor Front-End',
     description:
-      'Explore o portfólio de Matheus Freitas, focado em desenvolvimento web moderno com React e Next.js.',
+      'Conheça o portfólio de Matheus Freitas, desenvolvedor front-end apaixonado por criar interfaces impactantes.',
     images: ['https://matheus-freitas.vercel.app/og-image.jpg']
   }
 };
