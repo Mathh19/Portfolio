@@ -9,9 +9,45 @@ import { ScrollToTop } from '@components/ScrollToTop';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Matheus Freitas',
+  title: 'Matheus Freitas | Desenvolvedor Front-End',
   description:
-    'Bem vindo ao meu portifolio, sou um desenvolvedor front-end e quero sempre contribuir de forma significativa para o desenvolvimento de aplicações que possam impactar positivamente os usuários'
+    'Portfólio de Matheus Freitas, desenvolvedor front-end especializado em interfaces modernas e acessíveis. Confira projetos, habilidades e formas de contato.',
+  authors: [{ name: 'Matheus Freitas' }],
+  keywords: [
+    'Desenvolvedor Front-End',
+    'Portfólio',
+    'React',
+    'Next.js',
+    'JavaScript',
+    'TypeScript',
+    'Matheus Freitas',
+    'UI',
+    'Web Developer'
+  ],
+  metadataBase: new URL('https://matheus-freitas.vercel.app'),
+  openGraph: {
+    title: 'Matheus Freitas | Desenvolvedor Front-End',
+    description:
+      'Conheça o portfólio de Matheus Freitas, desenvolvedor front-end apaixonado por criar interfaces impactantes.',
+    url: 'https://matheus-freitas.vercel.app',
+    images: [
+      {
+        url: 'https://matheus-freitas.vercel.app/og-image.jpg',
+        width: 1200,
+        height: 630
+      }
+    ],
+    siteName: 'Matheus Freitas',
+    locale: 'pt_BR',
+    type: 'website'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Matheus Freitas | Desenvolvedor Front-End',
+    description:
+      'Explore o portfólio de Matheus Freitas, focado em desenvolvimento web moderno com React e Next.js.',
+    images: ['https://matheus-freitas.vercel.app/og-image.jpg']
+  }
 };
 
 export default function RootLayout({
