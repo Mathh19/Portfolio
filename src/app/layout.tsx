@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'Web Developer'
   ],
   verification: {
-    google: 'V_HDiTP1C1aHySVkCM4'
+    google: 'V_HDiTP1C1aHySVkCM4-E_TZkgINo12MMwNkEICDeKc'
   },
   metadataBase: new URL('https://matheus-freitas.vercel.app'),
   openGraph: {
