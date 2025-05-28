@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     'UI',
     'Web Developer'
   ],
+  verification: {
+    google: 'V_HDiTP1C1aHySVkCM4'
+  },
   metadataBase: new URL('https://matheus-freitas.vercel.app'),
   openGraph: {
     title: 'Matheus Freitas | Desenvolvedor Front-End',
