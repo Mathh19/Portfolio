@@ -3,7 +3,7 @@ import { LiaFileDownloadSolid } from 'react-icons/lia';
 import { ContainerProjects } from '@components/ContainerProjects';
 import { ContainerSkills } from '@components/ContainerSkills';
 import { CustomLink } from '@components/CustomLink';
-import { Form } from '@components/Form';
+import { Form } from '@components/From/Form';
 import { Section } from '@components/Section/Section';
 import { projects } from '@data/projects';
 import { skills } from '@data/skills';
