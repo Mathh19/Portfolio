@@ -12,7 +12,9 @@ export const Form = () => {
       <div className="w-full flex gap-8 max-md:flex-col max-md:gap-4">
         <div className="w-full flex flex-col gap-6">
           <div className="flex gap-2.5 flex-col">
-            <span className="text-3xl">Sua mensagem</span>
+            <label htmlFor="name" className="text-3xl">
+              Sua mensagem
+            </label>
             <Input
               type="text"
               value={formFields.name}
@@ -24,7 +26,9 @@ export const Form = () => {
             />
           </div>
           <div className="flex gap-2.5 flex-col">
-            <span className="text-3xl">Sua mensagem</span>
+            <label htmlFor="email" className="text-3xl">
+              Seu email
+            </label>
             <Input
               type="email"
               value={formFields.email}
@@ -37,7 +41,9 @@ export const Form = () => {
           </div>
         </div>
         <div className="w-full flex flex-col gap-2.5">
-          <span className="text-3xl">Sua mensagem</span>
+          <label htmlFor="message" className="text-3xl">
+            Sua mensagem
+          </label>
           <textarea
             id="message"
             name="message"
