@@ -13,7 +13,7 @@ export const Form = () => {
         <div className="w-full flex flex-col gap-6">
           <div className="flex gap-2.5 flex-col">
             <label htmlFor="name" className="text-3xl">
-              Sua nome
+              Seu nome
             </label>
             <Input
               type="text"
