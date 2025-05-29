@@ -13,7 +13,7 @@ export const Form = () => {
         <div className="w-full flex flex-col gap-6">
           <div className="flex gap-2.5 flex-col">
             <label htmlFor="name" className="text-3xl">
-              Sua mensagem
+              Sua nome
             </label>
             <Input
               type="text"
@@ -22,7 +22,7 @@ export const Form = () => {
                 setFormFields({ ...formFields, name: e.target.value })
               }
               name="name"
-              placeholder="Seu nome"
+              placeholder="nome"
             />
           </div>
           <div className="flex gap-2.5 flex-col">
