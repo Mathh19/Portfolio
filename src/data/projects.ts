@@ -42,31 +42,31 @@ export const projects = [
     url: 'https://infofilms.netlify.app',
     repository: 'https://github.com/Mathh19/info-films',
     techs: ['React', 'TypeScript', 'CSS', 'Vite', 'MUI', 'API']
-  },
-  {
-    title: 'Blog',
-    description:
-      'Este site é um blog sobre tecnologia, com foco em programação, nele compartilho meus conhecimentos que obtenho com meus estudos sobre programação.',
-    img: '/imgs/blog.png',
-    url: 'https://my-space-blog.vercel.app',
-    repository: 'https://github.com/Mathh19/next-blog',
-    techs: [
-      'Next.js',
-      'TypeScript',
-      'Styled-Components',
-      'Graphql',
-      'Vitest',
-      'Storybook',
-      'Strapi'
-    ]
-  },
-  {
-    title: 'Show Fest',
-    description:
-      'Um site para listar eventos como shows de bandas, onde é informado valores e quem irá fazer os shows.',
-    img: '/imgs/showfest.png',
-    url: 'https://show-fest-bands.netlify.app',
-    repository: 'https://github.com/Mathh19/LandingPage',
-    techs: ['HTML', 'CSS']
   }
+  // {
+  //   title: 'Blog',
+  //   description:
+  //     'Este site é um blog sobre tecnologia, com foco em programação, nele compartilho meus conhecimentos que obtenho com meus estudos sobre programação.',
+  //   img: '/imgs/blog.png',
+  //   url: 'https://my-space-blog.vercel.app',
+  //   repository: 'https://github.com/Mathh19/next-blog',
+  //   techs: [
+  //     'Next.js',
+  //     'TypeScript',
+  //     'Styled-Components',
+  //     'Graphql',
+  //     'Vitest',
+  //     'Storybook',
+  //     'Strapi'
+  //   ]
+  // },
+  // {
+  //   title: 'Show Fest',
+  //   description:
+  //     'Um site para listar eventos como shows de bandas, onde é informado valores e quem irá fazer os shows.',
+  //   img: '/imgs/showfest.png',
+  //   url: 'https://show-fest-bands.netlify.app',
+  //   repository: 'https://github.com/Mathh19/LandingPage',
+  //   techs: ['HTML', 'CSS']
+  // }
 ] as Project[];
