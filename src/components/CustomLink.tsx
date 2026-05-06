@@ -7,7 +7,7 @@ type CustomLinkProps = {
 export const CustomLink = ({ children, ...rest }: CustomLinkProps) => {
   return (
     <a {...rest}>
-      <div className="flex justify-center items-center gap-1.5 px-2.5 py-1.5 border border-background-color transition-all bg-white-color text-background-color font-semibold rounded hover:bg-black hover:text-white hover:border-white">
+      <div className="flex items-center justify-center gap-1.5 rounded-md border border-white/20 bg-white/5 px-4 py-2 text-sm font-medium text-white transition-all duration-200 hover:border-white/50 hover:bg-white/10">
         {children}
       </div>
     </a>

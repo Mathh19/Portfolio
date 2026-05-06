@@ -9,11 +9,11 @@ export const Form = () => {
 
   return (
     <form onSubmit={handleSubmit} className="w-full space-y-4">
-      <div className="w-full flex gap-8 max-md:flex-col max-md:gap-4">
-        <div className="w-full flex flex-col gap-6">
-          <div className="flex gap-2.5 flex-col">
+      <div className="w-full flex flex-wrap gap-8 max-md:flex-col max-md:gap-4">
+        <div className="w-full flex gap-6 max-md:flex-wrap">
+          <div className="flex w-full gap-3 flex-col">
             <label htmlFor="name" className="text-3xl">
-              Seu nome
+              Nome
             </label>
             <Input
               type="text"
@@ -22,12 +22,12 @@ export const Form = () => {
                 setFormFields({ ...formFields, name: e.target.value })
               }
               name="name"
-              placeholder="nome"
+              placeholder="Seu nome"
             />
           </div>
-          <div className="flex gap-2.5 flex-col">
+          <div className="flex w-full gap-3 flex-col">
             <label htmlFor="email" className="text-3xl">
-              Seu email
+              Email
             </label>
             <Input
               type="email"
@@ -40,7 +40,8 @@ export const Form = () => {
             />
           </div>
         </div>
-        <div className="w-full flex flex-col gap-2.5">
+
+        <div className="w-full flex flex-col gap-3">
           <label htmlFor="message" className="text-3xl">
             Sua mensagem
           </label>
@@ -53,8 +54,8 @@ export const Form = () => {
             }
             cols={30}
             rows={5}
-            placeholder="Digite sua mensagem"
-            className="w-full flex-grow bg-transparent border-2 border-white font-light rounded-lg px-4 py-1.5"
+            placeholder="Olá Matheus..."
+            className="w-full flex-grow bg-transparent border-2 border-white font-light rounded-lg px-4 py-3"
           />
         </div>
       </div>

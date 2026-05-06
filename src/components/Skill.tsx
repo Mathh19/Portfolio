@@ -7,15 +7,16 @@ type SkillProps = {
 
 export const Skill = ({ img, text }: SkillProps) => {
   return (
-    <div className="flex justify-start items-center gap-2 bg-zinc-800 px-3 py-2 rounded">
+    <div className="flex h-[140px] w-[140px] shrink-0 flex-col items-center justify-center gap-3 rounded-[6px] border border-white/10 transition-colors duration-300 hover:border-white">
       <Image
         src={img}
         alt={`${text} icon`}
-        width={30}
-        height={30}
-        className="w-full max-w-[30px]"
+        width={48}
+        height={48}
+        draggable={false}
+        className="select-none"
       />
-      <span>{text}</span>
+      <span className="text-center text-sm">{text}</span>
     </div>
   );
 };

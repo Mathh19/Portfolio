@@ -7,6 +7,7 @@ import { Project } from '@data/projects';
 import { motion } from 'framer-motion';
 
 import { CustomLink } from './CustomLink';
+import { GeometricFallback } from './GeometricFallback';
 
 export const ProjectCard = ({
   img,
@@ -24,25 +25,30 @@ export const ProjectCard = ({
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
     >
-      <div className="relative bg-gradient-to-b rounded-md from-zinc-400 to-zinc-600 p-[1px]">
-        <Image
-          src={img}
-          alt={`Imagem do projeto ${title}`}
-          width={800}
-          height={500}
-          priority
-          className="rounded-md aspect-[16/10] w-full object-cover"
-        />
+      <div className="relative bg-gradient-to-b rounded-md from-white/20 to-white/5 p-[1px]">
+        {img ? (
+          <Image
+            src={img}
+            alt={`Imagem do projeto ${title}`}
+            width={800}
+            height={500}
+            priority
+            draggable={false}
+            className="rounded-md aspect-[16/10] w-full object-cover"
+          />
+        ) : (
+          <GeometricFallback />
+        )}
       </div>
 
       <h2 className="text-3xl font-medium">{title}</h2>
       <p className="font-light">{description}</p>
 
-      <ul className="flex flex-wrap gap-3 py-2">
+      <ul className="flex flex-wrap gap-2 py-2">
         {techs.map((tech) => (
           <li
             key={tech}
-            className="text-sm border border-gray-color rounded-sm py-[2px] px-2.5"
+            className="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-gray-color transition-colors duration-200 hover:border-white/30 hover:bg-white/10"
           >
             {tech}
           </li>
