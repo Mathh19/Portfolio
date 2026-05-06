@@ -1,21 +1,32 @@
 import { NextResponse } from 'next/server';
 
-import { Resend } from 'resend';
+import {
+  sendContactEmail,
+  validateContactPayload
+} from '@services/email.service';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+export const maxDuration = 5;
 
 export async function POST(req: Request) {
-  const { name, email, message } = await req.json();
+  let body: unknown;
 
   try {
-    const data = await resend.emails.send({
-      from: `Recrutador ${name} <onboarding@resend.dev>`,
-      to: ['eumathfreitas@gmail.com'],
-      subject: `Nova mensagem de ${name}`,
-      text: `Email de: ${email}\n\n${message}`
-    });
+    body = await req.json();
+  } catch {
+    return NextResponse.json(
+      { error: 'Requisição inválida.' },
+      { status: 400 }
+    );
+  }
 
-    return NextResponse.json({ success: true, data });
+  const validation = validateContactPayload(body);
+  if (!validation.ok) {
+    return NextResponse.json({ error: validation.error }, { status: 422 });
+  }
+
+  try {
+    await sendContactEmail(validation.data);
+    return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Erro ao enviar email:', error);
     return NextResponse.json(
