@@ -42,7 +42,7 @@ export const projects: Project[] = [
   {
     title: 'Reapho',
     description:
-      'Plataforma full-stack interativa de leitura de mangás com recursos imersivos como reprodução de efeitos sonoros sincronizados por página. Foco em performance com pré-carregamento, lazy loading e caching (PWA), além de otimizações de SEO para indexação de conteúdo dinâmico.',
+      'Plataforma full-stack interativa de leitura de mangás com recursos imersivos como reprodução de efeitos sonoros sincronizados por página. Foco em performance com pré-carregamento, lazy loading e caching, além de otimizações de SEO para indexação de conteúdo dinâmico.',
     url: 'https://reapho.app/lp',
     techs: ['Next.js', 'NestJS', 'TypeScript', 'Firebase']
   }
