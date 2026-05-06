@@ -27,7 +27,7 @@ export const projects: Project[] = [
   {
     title: 'Sphera Academy',
     description:
-      'Plataforma educacional completa (SPA) com dashboard para alunos, área de mentores e painel administrativo. Arquitetura baseada em features com proteção de rotas via middlewares, gerenciamento de estado complexo, WebSockets para notificações em tempo real e formulários com React Hook Form + Zod.',
+      'Plataforma educacional completa (SPA) com acesso para alunos, área de mentores e painel administrativo. Arquitetura baseada em features com proteção de rotas via middlewares, gerenciamento de estado complexo, WebSockets para notificações em tempo real e formulários com React Hook Form + Zod.',
     url: 'https://www.spheraacademy.com/',
     techs: [
       'React',
