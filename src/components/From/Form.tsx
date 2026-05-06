@@ -76,7 +76,7 @@ export const Form = () => {
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="px-8 py-2 border-2 border-white bg-transparent rounded-md text-xl duration-200 ease-in-out disabled:bg-zinc-600 disabled:text-white disabled:border-zinc-600 hover:bg-white hover:text-background-color focus:bg-white focus:text-background-color max-md:w-full"
+          className="px-8 py-2 border-2 border-gray-color bg-transparent rounded-md text-xl text-gray-color duration-200 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-color hover:text-background-color focus:bg-gray-color focus:text-background-color max-md:w-full"
         >
           {status === 'loading' ? 'Enviando...' : 'Enviar'}
         </button>
