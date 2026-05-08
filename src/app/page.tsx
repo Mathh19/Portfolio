@@ -4,7 +4,8 @@ import { ContainerProjects } from '@components/ContainerProjects';
 import { ContainerSkills } from '@components/ContainerSkills';
 import { CustomLink } from '@components/CustomLink';
 import { Form } from '@components/From/Form';
-import { Section } from '@components/Section/Section';
+import { Section } from '@components/Section';
+import { SectionHeader } from '@components/SectionHeader';
 import { TypewriterText } from '@components/TypewriterText';
 import { projects } from '@data/projects';
 import { skills } from '@data/skills';
@@ -12,7 +13,8 @@ import { skills } from '@data/skills';
 export default function Home() {
   return (
     <div>
-      <Section id="initial" title="Olá, sou o Matheus.">
+      <Section id="initial">
+        <SectionHeader as="h1">Olá, sou o Matheus.</SectionHeader>
         <div className="flex flex-col gap-6 justify-center items-center">
           <TypewriterText text="Desenvolvedor Front-end." />
 
@@ -22,8 +24,9 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="about" title="Sobre mim">
-        <p id="About" className="text-xl font-light text-center max-w-3xl">
+      <Section id="about">
+        <SectionHeader>Sobre mim</SectionHeader>
+        <p className="text-xl font-light text-center max-w-3xl">
           Sou um desenvolvedor front-end dedicado a aprimorar constantemente
           meus conhecimentos. Minha paixão está em contribuir de forma
           significativa para o desenvolvimento de aplicações que possam impactar
@@ -32,15 +35,18 @@ export default function Home() {
         </p>
       </Section>
 
-      <Section id="skills" title="Habilidades">
+      <Section id="skills">
+        <SectionHeader>Habilidades</SectionHeader>
         <ContainerSkills skills={skills} />
       </Section>
 
-      <Section id="projects" title="Projetos">
+      <Section id="projects">
+        <SectionHeader>Projetos</SectionHeader>
         <ContainerProjects projects={projects} />
       </Section>
 
-      <Section id="contact" title="Contato">
+      <Section id="contact">
+        <SectionHeader>Contato</SectionHeader>
         <Form />
       </Section>
     </div>

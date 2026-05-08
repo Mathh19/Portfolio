@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { Footer } from '@components/Footer';
 import { Header } from '@components/Header';
+import { JsonLd } from '@components/JsonLd';
 import { ScrollToTop } from '@components/ScrollToTop';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -28,6 +29,9 @@ export const metadata: Metadata = {
     google: 'V_HDiTP1C1aHySVkCM4-E_TZkgINo12MMwNkEICDeKc'
   },
   metadataBase: new URL('https://matheus-freitas.vercel.app'),
+  alternates: {
+    canonical: '/'
+  },
   openGraph: {
     title: 'Matheus Freitas | Desenvolvedor Front-End',
     description:
@@ -37,7 +41,8 @@ export const metadata: Metadata = {
       {
         url: 'https://matheus-freitas.vercel.app/og-image.jpg',
         width: 1200,
-        height: 630
+        height: 630,
+        alt: 'Matheus Freitas | Desenvolvedor Front-End'
       }
     ],
     siteName: 'Matheus Freitas',
@@ -49,7 +54,12 @@ export const metadata: Metadata = {
     title: 'Matheus Freitas | Desenvolvedor Front-End',
     description:
       'Conheça o portfólio de Matheus Freitas, desenvolvedor front-end apaixonado por criar interfaces impactantes.',
-    images: ['https://matheus-freitas.vercel.app/og-image.jpg']
+    images: [
+      {
+        url: 'https://matheus-freitas.vercel.app/og-image.jpg',
+        alt: 'Matheus Freitas | Desenvolvedor Front-End'
+      }
+    ]
   }
 };
 
@@ -61,6 +71,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={inter.className}>
+        <JsonLd />
         <Header />
         <div className="min-h-screen flex justify-center">
           <main className="w-full px-6 md:px-14 max-w-[1440px]">

@@ -16,7 +16,7 @@ export const TypewriterText = ({
   const typingDuration = text.length * speed;
 
   return (
-    <h2 className={cn('text-2xl max-[336px]:text-xl', className)}>
+    <p className={cn('text-2xl max-[336px]:text-xl', className)}>
       <span className="relative inline-block">
         <span className="invisible select-none" aria-hidden="true">
           {text}
@@ -35,6 +35,6 @@ export const TypewriterText = ({
           {text}
         </span>
       </span>
-    </h2>
+    </p>
   );
 };

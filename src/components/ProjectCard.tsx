@@ -41,7 +41,7 @@ export const ProjectCard = ({
         )}
       </div>
 
-      <h2 className="text-3xl font-medium">{title}</h2>
+      <h3 className="text-3xl font-medium">{title}</h3>
       <p className="font-light">{description}</p>
 
       <ul className="flex flex-wrap gap-2 py-2">
