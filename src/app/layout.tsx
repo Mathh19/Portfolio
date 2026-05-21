@@ -6,6 +6,7 @@ import { Footer } from '@components/Footer';
 import { Header } from '@components/Header';
 import { JsonLd } from '@components/JsonLd';
 import { ScrollToTop } from '@components/ScrollToTop';
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -80,6 +81,7 @@ export default function RootLayout({
         </div>
         <ScrollToTop />
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
