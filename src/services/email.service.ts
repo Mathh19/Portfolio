@@ -12,9 +12,9 @@ export interface ContactPayload {
   message: string;
 }
 
-type ValidationResult =
-  | { ok: true; data: ContactPayload }
-  | { ok: false; error: string };
+type ValidationOk = { ok: true; data: ContactPayload };
+type ValidationError = { ok: false; error: string };
+type ValidationResult = ValidationOk | ValidationError;
 
 export function validateContactPayload(raw: unknown): ValidationResult {
   if (typeof raw !== 'object' || raw === null) {
